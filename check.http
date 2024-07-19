@@ -1,0 +1,95 @@
+# POST http://localhost:3030/register
+# Content-Type: application/json
+
+# {
+#     "username":"Charan",
+#     "password":"Charan"
+# }
+
+#GET http://localhost:3030/register/get
+
+# POST http://localhost:3030/login
+# Content-Type: application/json
+
+# {
+#     "username":"Charan",
+#     "password":"Charan"
+# }
+
+# POST http://localhost:3030/post/note
+# Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudXNoYSIsImlhdCI6MTcyMTI5OTUzNH0.0rvk1LBtjHqOSqCs5PvXr5R2TiKRvyXNkWRCQpK7yxw
+
+
+# {
+#     "id":"10",
+#     "title":"WWE",
+#     "description":"WWE is popular entertainment.",
+#     "person_username":"Charan",
+#     "archieved":true
+# }
+
+# GET http://localhost:3030/get/notes/Charan/w
+# Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+
+# POST http://localhost:3030/post/deleted_note
+# Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudXNoYSIsImlhdCI6MTcyMTI5OTUzNH0.0rvk1LBtjHqOSqCs5PvXr5R2TiKRvyXNkWRCQpK7yxw
+
+
+# {
+#     "id":"10",
+#     "title":"Story1",
+#     "description":"Stories1 is good to hear.",
+#     "person_username":"Anusha",
+#     "archieved":false,
+#     "date_of_delete":"2024-07-18"
+# }
+
+# GET http://localhost:3030/get/deleted_notes/Anusha
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+# PUT http://localhost:3030/archieve/note/3/false
+# Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+
+GET http://localhost:3030/get/notes/all/Charan
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+# POST http://localhost:3030/post/label
+# Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudXNoYSIsImlhdCI6MTcyMTI5OTUzNH0.0rvk1LBtjHqOSqCs5PvXr5R2TiKRvyXNkWRCQpK7yxw
+
+
+# {
+#     "id_note":"9",
+#     "id_label":"1",
+#     "label_name":"First",
+#     "person_name":"Charan"
+# }
+
+# GET http://localhost:3030/get/label/9
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+# DELETE http://localhost:3030/delete/label/224234db-e13c-4690-9907-8f44ffc30d8b
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+# GET http://localhost:3030/get/distinct/Charan
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
+
+# GET http://localhost:3030/get/everylabel
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkNoYXJhbiIsImlhdCI6MTcyMTI5NzU3Nn0.paWLKSpJGHTo94h04_dq9tZZWJ1TNKaErr9o62IpDeQ
